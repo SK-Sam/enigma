@@ -15,4 +15,14 @@ defmodule KeyTest do
     expected = %Key{a: "01", b: "12", c: "23", d: "34"}
     assert abcd_keys === expected
   end
+
+  test "It can create keys by integrating create_seed/1 and get_abcd_keys/1" do
+    keys = Key.create_keys
+
+    assert is_map(keys) == true
+    assert String.length(keys.a) == 2
+    assert String.length(keys.b) == 2
+    assert String.length(keys.c) == 2
+    assert String.length(keys.d) == 2
+  end
 end
