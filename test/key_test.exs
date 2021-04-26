@@ -12,7 +12,7 @@ defmodule KeyTest do
     seed = "01234"
     abcd_keys = Key.get_abcd_keys(seed)
 
-    expected = %{a: "01", b: "12", c: "23", d: "34"}
+    expected = %Key{a: "01", b: "12", c: "23", d: "34"}
     assert abcd_keys === expected
   end
 end
