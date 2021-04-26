@@ -21,7 +21,6 @@ defmodule Enigma.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:mox, "~> 1.0.0", only: :test}
     ]
   end
 end
