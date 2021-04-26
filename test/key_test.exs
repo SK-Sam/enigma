@@ -21,8 +21,12 @@ defmodule KeyTest do
 
     assert is_map(keys) == true
     assert String.length(keys.a) == 2
+    assert String.to_integer(keys.a) < 99 and String.to_integer(keys.a) > 0
     assert String.length(keys.b) == 2
+    assert String.to_integer(keys.b) < 99 and String.to_integer(keys.a) > 0
     assert String.length(keys.c) == 2
+    assert String.to_integer(keys.c) < 99 and String.to_integer(keys.a) > 0
     assert String.length(keys.d) == 2
+    assert String.to_integer(keys.d) < 99 and String.to_integer(keys.a) > 0
   end
 end
