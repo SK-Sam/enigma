@@ -3,7 +3,9 @@ defmodule KeyTest do
   doctest Key
 
   test "It can create a seed" do
-    assert String.length(Key.create_seed) == 5
+    seed = Key.create_seed
+
+    assert String.length(seed) == 5
   end
 
   test "It can make A B C D key out of a seed" do
