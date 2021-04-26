@@ -1,6 +1,11 @@
 defmodule Key do
   defstruct a: nil, b: nil, c: nil, d: nil
 
+  def create_keys do
+    create_seed()
+    |> get_abcd_keys
+  end
+
   def get_abcd_keys(seed) do
     all_keys = %Key{}
     all_keys = %{all_keys | a: String.slice(seed, 0..1) }
