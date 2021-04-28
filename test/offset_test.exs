@@ -10,7 +10,6 @@ defmodule OffsetTest do
     assert squared_string == expectation
   end
 
-  @tag :skip
   test "It can square today's date if there is no arg given" do
     squared_string = Offset.date_string_squared
 
